@@ -1,0 +1,115 @@
+== LIST OF DATABASES ==
+(the 'baseball' database will not appear until we put a collection in it)
+['admin', 'config', 'local', 'mydatabase', 'test'] 
+
+== LIST OF COLLECTIONS ==
+(should be empty because there are no records in it yet)
+[] 
+
+
+== CREATING A RECORD ==
+Buster Posey ID: 5d56eba67689563f5f27c48f 
+
+
+== LIST OF DATABASES (UPDATED) ==
+['admin', 'baseball', 'config', 'local', 'mydatabase', 'test'] 
+
+== LIST OF COLLECTIONS (UPDATED) ==
+['giants'] 
+
+
+== CREATING MANY RECORDS ==
+(will return a list of object ID's)
+
+[ObjectId('5d56eba67689563f5f27c490'), ObjectId('5d56eba67689563f5f27c491'), ObjectId('5d56eba67689563f5f27c492'), ObjectId('5d56eba67689563f5f27c493'), ObjectId('5d56eba67689563f5f27c494'), ObjectId('5d56eba67689563f5f27c495'), ObjectId('5d56eba67689563f5f27c496'), ObjectId('5d56eba67689563f5f27c497')] 
+
+
+*******************
+NEW LIST OF PLAYERS
+*******************
+{'_id': ObjectId('5d56eba67689563f5f27c48f'), 'number': 28, 'name': 'Buster Posey', 'position': 'catcher'}
+{'_id': ObjectId('5d56eba67689563f5f27c490'), 'number': 9, 'name': 'Brandon Belt', 'position': 'first baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c491'), 'number': 14, 'name': 'Scooter Gennett', 'position': 'second baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c492'), 'number': 10, 'name': 'Evan Longoria', 'position': 'third baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c493'), 'number': 35, 'name': 'Brandon Crawford', 'position': 'shortstop'}
+{'_id': ObjectId('5d56eba67689563f5f27c494'), 'number': 5, 'name': 'Mike Yastrzemski', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c495'), 'number': 1, 'name': 'Kevin Pillar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c496'), 'number': 53, 'name': 'Austin Slater', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c497'), 'number': 40, 'name': 'Madison Bumgarner', 'position': 'pitcher'}
+
+
+
+== UPDATING A RECORD ==
+(changing Austin Slater's spot to Steven Duggar's)
+
+***********************
+UPDATED LIST OF PLAYERS
+***********************
+{'_id': ObjectId('5d56eba67689563f5f27c48f'), 'number': 28, 'name': 'Buster Posey', 'position': 'catcher'}
+{'_id': ObjectId('5d56eba67689563f5f27c490'), 'number': 9, 'name': 'Brandon Belt', 'position': 'first baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c491'), 'number': 14, 'name': 'Scooter Gennett', 'position': 'second baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c492'), 'number': 10, 'name': 'Evan Longoria', 'position': 'third baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c493'), 'number': 35, 'name': 'Brandon Crawford', 'position': 'shortstop'}
+{'_id': ObjectId('5d56eba67689563f5f27c494'), 'number': 5, 'name': 'Mike Yastrzemski', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c495'), 'number': 1, 'name': 'Kevin Pillar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c496'), 'number': 6, 'name': 'Steven Duggar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c497'), 'number': 40, 'name': 'Madison Bumgarner', 'position': 'pitcher'}
+
+
+
+== FINDING OBJECT ID OF FIRST RECORD ==
+{'_id': ObjectId('5d56eba67689563f5f27c48f'), 'number': 28, 'name': 'Buster Posey', 'position': 'catcher'} 
+
+
+
+== QUERYING A COLLECTION ==
+(finding all outfielders in the collection)
+
+{'_id': ObjectId('5d56eba67689563f5f27c494'), 'number': 5, 'name': 'Mike Yastrzemski', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c495'), 'number': 1, 'name': 'Kevin Pillar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c496'), 'number': 6, 'name': 'Steven Duggar', 'position': 'outfielder'}
+
+
+
+== SORTING A COLLECTION ==
+(will go in descending order by name)
+
+**********************
+SORTED LIST OF PLAYERS
+**********************
+{'_id': ObjectId('5d56eba67689563f5f27c496'), 'number': 6, 'name': 'Steven Duggar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c491'), 'number': 14, 'name': 'Scooter Gennett', 'position': 'second baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c494'), 'number': 5, 'name': 'Mike Yastrzemski', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c497'), 'number': 40, 'name': 'Madison Bumgarner', 'position': 'pitcher'}
+{'_id': ObjectId('5d56eba67689563f5f27c495'), 'number': 1, 'name': 'Kevin Pillar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c492'), 'number': 10, 'name': 'Evan Longoria', 'position': 'third baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c48f'), 'number': 28, 'name': 'Buster Posey', 'position': 'catcher'}
+{'_id': ObjectId('5d56eba67689563f5f27c493'), 'number': 35, 'name': 'Brandon Crawford', 'position': 'shortstop'}
+{'_id': ObjectId('5d56eba67689563f5f27c490'), 'number': 9, 'name': 'Brandon Belt', 'position': 'first baseman'}
+
+
+
+== DELETING A RECORD ==
+(will delete Buster Posey from collection)
+
+***********************
+UPDATED LIST OF PLAYERS
+***********************
+{'_id': ObjectId('5d56eba67689563f5f27c490'), 'number': 9, 'name': 'Brandon Belt', 'position': 'first baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c491'), 'number': 14, 'name': 'Scooter Gennett', 'position': 'second baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c492'), 'number': 10, 'name': 'Evan Longoria', 'position': 'third baseman'}
+{'_id': ObjectId('5d56eba67689563f5f27c493'), 'number': 35, 'name': 'Brandon Crawford', 'position': 'shortstop'}
+{'_id': ObjectId('5d56eba67689563f5f27c494'), 'number': 5, 'name': 'Mike Yastrzemski', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c495'), 'number': 1, 'name': 'Kevin Pillar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c496'), 'number': 6, 'name': 'Steven Duggar', 'position': 'outfielder'}
+{'_id': ObjectId('5d56eba67689563f5f27c497'), 'number': 40, 'name': 'Madison Bumgarner', 'position': 'pitcher'}
+
+
+
+== DELETING ALL RECORDS IN A COLLECTION ==
+8 document(s) deleted.
+
+
+== DROPPING A COLLECTION ==
+(the 'giants' collection should not appear under here)
+[]
